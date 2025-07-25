@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: wideupload-backend
+    env: node
+    repo: https://github.com/emmanuel582/WideUpload-Backend.git
+    branch: main
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: IG_USERNAME
+        sync: false
+      - key: IG_PASSWORD
+        sync: false
+    buildCommand: |
+      apt-get update && apt-get install -y ffmpeg
+      pip install whisper
+      npm install
+    startCommand: npm start

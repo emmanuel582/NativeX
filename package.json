@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "start:gemini": "node geminiserver.js",
+    "start:whatsapp": "node whatsapp-bot.js",
+    "dev:all": "concurrently \"node server.js\" \"node geminiserver.js\" \"node whatsapp-bot.js\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3",
+    "@google/generative-ai": "^0.6.0",
+    "dotenv": "^17.2.0",
+    "axios": "^1.6.7",
+    "cloudinary": "^1.37.3",
+    "multer": "^1.4.5-lts.1",
+    "form-data": "^4.0.0",
+    "node-cron": "^3.0.3",
+    "twitter-api-v2": "^1.16.0",
+    "cors": "^2.8.5",
+    "googleapis": "^133.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.23.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
